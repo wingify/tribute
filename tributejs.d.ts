@@ -31,10 +31,10 @@ export type TributeCollection<T extends {}> = {
   itemClass?: string;
 
   // function called on select that returns the content to insert
-  selectTemplate?: (item: TributeItem<T>|undefined) => string;
+  selectTemplate?: (item: TributeItem<T>|undefined) => string | HTMLElement;
 
   // template for displaying item in menu
-  menuItemTemplate?: (item: TributeItem<T>) => string;
+  menuItemTemplate?: (item: TributeItem<T>) => string | HTMLElement;
 
   // template for when no match is found (optional),
   // If no template is provided, menu is hidden.
@@ -87,7 +87,7 @@ export type TributeCollection<T extends {}> = {
   spaceSelectsMatch?: boolean;
 };
 
-export type TributeOptions<T> =
+export type TributeOptions<T extends {}> =
   | TributeCollection<T>
   | {
       // pass an array of config objects
