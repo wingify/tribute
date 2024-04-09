@@ -635,9 +635,7 @@ class TributeRange {
                 let textSuffix = typeof this.tribute.replaceTextSuffix == 'string'
                     ? this.tribute.replaceTextSuffix
                     : '\xA0';
-                if(text instanceof HTMLElement) {
-                    text.appendChild(this.getDocument().createTextNode(textSuffix));
-                } else {
+                if(text instanceof HTMLElement) ; else {
                     text += textSuffix;
                 }
                 let endPos = info.mentionPosition + info.mentionText.length;

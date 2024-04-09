@@ -139,7 +139,8 @@ class TributeRange {
                     ? this.tribute.replaceTextSuffix
                     : '\xA0'
                 if(text instanceof HTMLElement) {
-                    text.appendChild(this.getDocument().createTextNode(textSuffix))
+                    // skip adding suffix yet - TODO later
+                    // text.appendChild(this.getDocument().createTextNode(textSuffix))
                 } else {
                     text += textSuffix
                 }

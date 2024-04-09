@@ -688,9 +688,7 @@
             // add a space to the end of the pasted text
             var _textSuffix = typeof this.tribute.replaceTextSuffix == 'string' ? this.tribute.replaceTextSuffix : '\xA0';
 
-            if (text instanceof HTMLElement) {
-              text.appendChild(this.getDocument().createTextNode(_textSuffix));
-            } else {
+            if (text instanceof HTMLElement) ; else {
               text += _textSuffix;
             }
 
