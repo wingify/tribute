@@ -686,12 +686,12 @@
             myField.selectionEnd = startPos + text.length;
           } else {
             // add a space to the end of the pasted text
-            var _textSuffix2 = typeof this.tribute.replaceTextSuffix == 'string' ? this.tribute.replaceTextSuffix : '\xA0';
+            var _textSuffix = typeof this.tribute.replaceTextSuffix == 'string' ? this.tribute.replaceTextSuffix : '\xA0';
 
             if (text instanceof HTMLElement) {
               text.appendChild(this.getDocument().createTextNode(_textSuffix));
             } else {
-              text += _textSuffix2;
+              text += _textSuffix;
             }
 
             var _endPos = info.mentionPosition + info.mentionText.length;
