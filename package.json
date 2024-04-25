@@ -12,18 +12,13 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-multi-entry": "^3.0.0",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@web/test-runner": "^0.18.1",
+    "@web/test-runner-commands": "^0.9.0",
+    "@web/test-runner-playwright": "^0.11.0",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
-    "jasmine-core": "^3.4.0",
-    "karma": "^4.2.0",
-    "karma-browserify": "^7.0.0",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-coverage": "^2.0.1",
-    "karma-jasmine": "^3.1.1",
-    "karma-jasmine-html-reporter": "^1.4.2",
-    "karma-spec-reporter": "0.0.32",
-    "puppeteer": "^2.1.1",
+    "chai": "^5.1.0",
     "rollup": "^1.32.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-eslint": "^7.0.0",
@@ -40,10 +35,8 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "test": "karma start test/karma.conf.js",
-    "test-single-run": "karma start test/karma.conf.js --single-run --browsers ChromeHeadless"
+    "test": "web-test-runner \"test/spec/test.js\" --node-resolve --playwright --browsers chromium"
   },
   "author": "Jordan Humphreys <jordan@zurb.com>",
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }
