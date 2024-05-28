@@ -110,4 +110,6 @@ export default class Tribute<T extends {}> {
   detach(to: TributeElement): void;
 
   showMenuForCollection(input: Element, collectionIndex?: number): void;
+
+  hideMenu(): void;
 }
